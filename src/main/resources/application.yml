@@ -7,3 +7,8 @@ ldap:
     base: dc=my-domain,dc=com
     userDn: cn=Manager,dc=my-domain,dc=com
     password: secret
+  contextConfiguration:
+    userDnPatterns: uid={0},ou=people
+    groupSearchBase: ou=groups
+    groupSearchFilter: member={0}
+    userSearchBase: ou=people
