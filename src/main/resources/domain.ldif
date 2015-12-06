@@ -1,0 +1,53 @@
+dn: dc=my-domain,dc=com
+objectClass: dcObject
+objectClass: organization
+dc: my-domain
+o: my-domain
+description: Example directory
+structuralObjectClass: organization
+
+dn: cn=root,dc=my-domain,dc=com
+objectClass: organizationalRole
+cn: root
+description: Directory Manager
+structuralObjectClass: organizationalRole
+
+dn: ou=groups,dc=my-domain,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: groups
+structuralObjectClass: organizationalUnit
+
+dn: ou=people,dc=my-domain,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: people
+structuralObjectClass: organizationalUnit,dc=com
+
+dn: uid=bob,ou=people,dc=my-domain,dc=com
+objectClass: top
+objectClass: person
+objectClass: organizationalPerson
+objectClass: inetOrgPerson
+cn: Bob Hamilton
+sn: Hamilton
+uid: bob
+userPassword:: e1NIQX1TQmdhelNLejdhNjhpa1I0YUtmZmZPWXBrZ289
+
+dn: cn=developers,ou=groups,dc=my-domain,dc=com
+cn: developers
+member: uid=bob,ou=people,dc=my-domain,dc=com
+objectClass: top
+objectClass: groupOfNames
+ou: developer
+structuralObjectClass: groupOfNames
+
+dn: uid=tata,ou=people,dc=my-domain,dc=com
+cn: Tata Toto
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+sn: Toto
+uid: tata
+userPassword:: e1NIQX1rSGxhRC9xb3VJd09KUVZHMkVPYnljTWVXbDQ9
